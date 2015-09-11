@@ -1,0 +1,23 @@
+
+//sourceCompatibility = 1.8
+version = '1.0'
+apply plugin: 'java'
+apply plugin: 'maven'
+compileJava.options.fork = true
+compileJava.options.forkOptions.executable = '/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin/javac'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+sourceSets{
+    main.java.srcDir 'src/main/java'
+    main.resources.srcDir 'src/main/resources'
+    test.java.srcDirs 'src/main/test'
+}
+
+dependencies {
+    testCompile 'org.testng:testng:6.8.21'
+
+}
+
